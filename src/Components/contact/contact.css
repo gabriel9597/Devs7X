@@ -1,0 +1,214 @@
+
+
+
+.Contact-BG {
+    margin-top: -30px;
+}
+
+.Contact-Img {
+    width: 100%;
+    margin-top: -40px;
+}
+
+
+#Form-Container,
+.textContainer {
+    display: flex;
+    overflow: hidden;
+}
+
+#Form-Container {
+    align-items: center;
+    gap: 50px;
+    padding: 30px 15px;
+    width: 100%;
+}
+
+.textContainer {
+    flex: 1 1;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.textContainer h1 {
+    color: #fff;
+    font-size: 50px;
+    overflow: hidden;
+}
+
+.textContainer h2 {
+    color: #fff;
+    overflow: hidden;
+}
+
+.textContainer span {
+    color: #fff;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+.formContact {
+    flex: 1 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.Form-Input-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.input-group input, textarea {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    height: 80px;
+    outline: none;
+    padding: 20px 10px;
+    width: 700px;
+}
+
+.input-group label {
+    color: #fff;
+    font-size: 16px;
+    left: 5px;
+    padding: 0 5px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .5s;
+    background-color: transparent;
+}
+
+.input-group input:focus ~ label,
+.input-group textarea:focus ~ label,
+.input-group .txt-long2 input:focus ~ label {
+  top: 7px;
+  font-size: 12px;
+  background: red;
+  left: 2px;
+}
+
+.formContact button {
+    background-color: red;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 20px;
+}
+
+@media (min-width: 1250px) {
+    .Contact-Img {
+        height: 635px;
+        margin-top: -48px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .formContact::placeholder {
+      display: flex;
+    }
+  }
+
+@media (max-width: 991px) {
+    .btn-M4 {
+        background-color: var(--button-color) !important;
+        font-size: 1rem !important;
+        display: flex !important;
+        margin: 0 95px 20px;
+    }
+
+    .Contact-Img {
+        margin-top: -15px;
+    }
+}
+
+@media (max-width: 850px) {
+}
+
+@media (max-width: 767px) {
+    #Form-Container {
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .textContainer {
+        align-items: center;
+        gap: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .textContainer h1 {
+        font-size: 36px;
+    }
+
+    .textContainer h2 {
+        padding-top: 40px;
+    }
+
+    /*.item1, .item2 {
+        margin: -20px 0;
+    }*/
+
+    .item2 {
+        padding-top: 10px;
+    }
+
+    .input-group input, textarea {
+        height: 80px;
+        width: 500px;
+    }
+
+    .formContact button {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 530px) {
+    .textContainer h1 {
+        font-size: 27px;
+    }
+
+    .input-group input, textarea {
+        width: 350px;
+    }
+}
+
+@media (max-width: 415px) {
+    .btn-M4 {
+        margin: 0 auto 20px;
+    }   
+}
+
+@media (max-width: 405px) {
+    .textContainer h1 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 400px) {
+    .input-group input, textarea {
+        height: 90px;
+        width: 300px;
+    }
+
+    .input-group textarea {
+        overflow: hidden;
+        padding: 40px 10px;
+    }
+
+    .txt-long2 input {
+        padding: 50px 10px;
+    }
+
+    /*.input-group textarea:focus ~ label,*/
+    .txt-long2 input:focus ~ label {
+        top: 17px;
+    }
+}
