@@ -58,9 +58,9 @@ function Servicos() {
                     scrollLeft: scrollPosition}, 600);
                 }
         })
-        
+
     } else {
-        multipleItemCarousel.classList.add('slide')
+        multipleItemCarousel.classList.add('slide');
     }
     
     const carouselRef = useRef(null);
