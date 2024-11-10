@@ -58,7 +58,8 @@ function Servicos() {
                     scrollLeft: scrollPosition}, 600);
                 }
         })
-    }else{
+        
+    } else {
         multipleItemCarousel.classList.add('slide')
     }
     
