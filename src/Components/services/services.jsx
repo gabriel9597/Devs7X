@@ -10,7 +10,6 @@ import {
     FaCopyright,
     FaHouseChimney,
     FaPhone,
-    FaSlideshare,
     FaSquareInstagram,
     FaSquareWhatsapp,
     FaTv
