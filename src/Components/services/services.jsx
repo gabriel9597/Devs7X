@@ -59,7 +59,7 @@ function Servicos() {
     const carouselRef = useRef(null);
         useEffect(() => {
             if (carouselRef.current) {
-            new window.bootstrap(carouselRef.current).cycle();
+            new window.bootstrap.Carousel(carouselRef.current).cycle();
             }
     }, []);
 
