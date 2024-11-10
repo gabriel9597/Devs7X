@@ -59,9 +59,7 @@ function Servicos() {
                 }
         })
 
-    } else {
-        document.querySelector(multipleItemCarousel).classList.add('slide');
-    }
+    } 
     
     const carouselRef = useRef(null);
         useEffect(() => {
@@ -194,7 +192,7 @@ function Servicos() {
 
 
             <motion.section className='Services-Section'>
-                <motion.div ref={Mov2} variants={variantsRTLServPage} initial="initial" whileInView="animate" id="carouselSliderServices" className="carousel slider-container">
+                <motion.div ref={Mov2} variants={variantsRTLServPage} initial="initial" whileInView="animate" id="carouselSliderServices" className="carousel slider-container slide">
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselSliderServices" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselSliderServices" data-bs-slide-to="1" aria-label="Slide 2"></button>
