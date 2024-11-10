@@ -31,10 +31,6 @@ function Servicos() {
     const multipleItemCarousel = document.querySelector("#carouselSliderServices") 
     if(window.matchMedia("{min-width:576px}").matches) {
         
-        const carousel = new bootstrap.Carousel(multipleItemCarousel, {
-            interval: false 
-        })
-        
         const carouselWidth = document.querySelector("#carouselSliderServices .carousel-slider-inner")[0].scrollWidth;
         const boxWidth = document.querySelector("#carouselSliderServices .carousel-slider-item").width();
 
