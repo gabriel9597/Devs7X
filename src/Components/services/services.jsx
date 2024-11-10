@@ -53,7 +53,6 @@ function Servicos() {
                     scrollLeft: scrollPosition}, 600);
                 }
         })
-
     } 
 
     const carouselRef = useRef(null);
