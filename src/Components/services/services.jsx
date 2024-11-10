@@ -56,6 +56,12 @@ function Servicos() {
     } 
 
     const carouselRef = useRef(null);
+    useEffect(() => {
+        if (carouselRef.current) {
+        new window.bootstrap.Carousel(carouselRef.current).cycle();
+        }
+}, []);
+
 
     const variantsDTPFooter2 = {
         initial: {
@@ -262,7 +268,7 @@ function Servicos() {
             <motion.section ref={Mov2} variants={variantsLTRServPage} initial="initial" whileInView="animate" className="Benefits-Section">
                 <h2 className='Benefits-Title'>Benefícios que sua Empresa Terá Estando Junto Conosco</h2>
 
-                <div id="carouselExampleSlidesOnly"  ref={carouselRef} className="carousel slide" data-bs-ride="carousel" data-bs-pause="false" >
+                <div id="carouselExampleSlidesOnly" ref={carouselRef} className="carousel slide" data-bs-ride="carousel" data-bs-pause="false" >
                     <div className="carousel-inner">
                         <div className="carousel-item active" data-bs-interval="15000">
                             <div className='Benefits-Cont'>
@@ -347,7 +353,7 @@ function Servicos() {
                                         <div className='Benefits-Texts'>
                                             <h4 className='Benefits-SubTitle'>4º Expansão</h4>
                                             <p className='Benefits-Text'>Além de Tudo que Nós Falamos Até Agora, Temos a Certeza que o Maior Benefício que Podemos Oferecer a Sua Marca É a Expansão, Algo que Sempre na História do Mundo Dos Negócios Foi um Fator Determinante para a Consolidação do Sucesso de uma Empresa</p>
-                                            <p className='Benefits-Text'>Pois com ela se Concretiza Aquilo que Toda Empresa Precisa Para se Fortalecer e se Tornar Bem-Sucedida: A Capacidade de Crescer em Escala! Somente Dessa Forma sua Marca irá se Expandir e Alcançar Tudo Aquilo que o(a) (Senhor(a)) Sempre Imaginou Para o seu Negócio</p>
+                                            <p className='Benefits-Text'>Pois com ela se Concretiza Aquilo que Toda Empresa Precisa Para se Fortalecer e se Tornar Bem-Sucedida: A Capacidade de Crescer em Escala! Somente Dessa Forma sua Marca irá se Expandir e Alcançar Tudo Aquilo que Sempre Imaginou Para o seu Negócio</p>
                                             <p className='Benefits-Text'>Tudo Que Foi Falado Até Agora, Foram Somente 4 Benefícios que Oferecemos ao Seu Negócio, Sendo eles Uma Pequena Parte do Que Podemos Oferecer ao Crescimento de Sua Empresa e ao Fortalecimento de Sua Marca, No Momento que Escolher Estar Conosco, Não Irá se arrepender dos Outros Benefícios que Descubrirá E De Nosso Serviço Prestado, Conte Conosco para o Sucesso de Sua Empresa!</p>
                                         </div>
 
