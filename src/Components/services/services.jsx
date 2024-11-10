@@ -59,7 +59,7 @@ function Servicos() {
                 }
         })
     }else{
-        $(multipleItemCarousel).addClass('slide')
+        multipleItemCarousel.classList.add('slide')
     }
     
     const carouselRef = useRef(null);
