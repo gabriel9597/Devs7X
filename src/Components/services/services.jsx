@@ -60,7 +60,7 @@ function Servicos() {
         })
 
     } else {
-        multipleItemCarousel.classList.add('slide');
+        document.querySelector(multipleItemCarousel).classList.add('slide');
     }
     
     const carouselRef = useRef(null);
