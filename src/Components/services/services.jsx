@@ -55,11 +55,11 @@ function Servicos() {
         })
 
     } 
-    
+
     const carouselRef = useRef(null);
         useEffect(() => {
             if (carouselRef.current) {
-            new window.bootstrap.Carousel(carouselRef.current).cycle();
+            new window.bootstrap(carouselRef.current).cycle();
             }
     }, []);
 
@@ -413,7 +413,7 @@ function Servicos() {
                         <motion.p className='copyright'><FaCopyright /> CopyRight 2024 - Devs7x International - Todos os Direitos Reservados</motion.p>
                     </div>
             </section>
-    </div>
+    </div>    
   )
 }
 
