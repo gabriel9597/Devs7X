@@ -75,8 +75,6 @@ function Servicos() {
             return () => clearInterval(interval); // Cleanup the interval on unmount
         }, []);
         
-
-    
     const variantsDTPFooter2 = {
         initial: {
         y: 15,
