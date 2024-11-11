@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../Images/Devs7X_New_Logo_1.png';
 import "./services.css";
-import "./services.module.css";
+
 import { MdOutlineMail } from "react-icons/md";
 
 import { 
@@ -27,7 +27,7 @@ import ImgBenf2 from "../../Images/imgbeneficios2.2.png";
 import ImgBenf3 from "../../Images/imgbeneficios3.2.png";
 import ImgBenf4 from "../../Images/imgbeneficios4.2.png";
 import {motion} from "framer-motion";
-import $ from 'jquery';
+
 function Servicos() {
     const multipleItemCarousel = document.querySelector("#carouselSliderServices") 
     if(window.matchMedia("{min-width:576px}").matches) {
@@ -59,10 +59,11 @@ function Servicos() {
     const carouselRef = useRef(null);
     
         useEffect(() => {
-             if (window.bootstrap || carouselRef.current) {        
-                new window.bootstrap.Carousel(carouselRef.current).cycle();
+             if (window.bootstrap && carouselRef.current) {        
+               new window.bootstrap.Carousel(carouselRef.current).cycle();
             }
         }, []);
+
     
     const variantsDTPFooter2 = {
         initial: {
