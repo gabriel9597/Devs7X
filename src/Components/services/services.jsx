@@ -67,12 +67,13 @@ function Servicos() {
         useEffect(() => {
             const interval = setInterval(() => {
                 if (window.bootstrap && typeof window.bootstrap.Carousel === 'function' && carouselRef.current) {
+                    console.log(window.bootstrap)
                     new window.bootstrap.Carousel(carouselRef.current).cycle();
-                    clearInterval(interval); // Stop checking once it's ready
+                    clearInterval(interval);
                 }
-            }, 100); // Check every 100ms
-        
-            return () => clearInterval(interval); // Cleanup the interval on unmount
+            }, 100);
+
+            return () => clearInterval(interval);
         }, []);
         
     const variantsDTPFooter2 = {
