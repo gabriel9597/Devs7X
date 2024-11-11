@@ -72,11 +72,11 @@ function Contato() {
       }
     }
 
-
     const Mov3 = useRef();
-  return (
-    <div>
-        <header className='header w-100 d-flex align-items-center z-3'>
+
+     return (
+        <div>
+            <header className='header w-100 d-flex align-items-center z-3'>
                 
 
                 <nav className="navbar navbar-expand-lg bg-transparent" aria-label="Offcanvas navbar large">
@@ -218,8 +218,8 @@ function Contato() {
                         <p className='copyright'><FaCopyright /> CopyRight 2024 - Devs7x International - Todos os Direitos Reservados</p>
                     </div>
             </section>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Contato;
