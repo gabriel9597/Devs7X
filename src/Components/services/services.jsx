@@ -64,7 +64,6 @@ function Servicos() {
             }
         }, []);
     
-    
     const variantsDTPFooter2 = {
         initial: {
         y: 15,
