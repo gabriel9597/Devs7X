@@ -58,11 +58,23 @@ function Servicos() {
 
     const carouselRef = useRef(null);
     
+        //useEffect(() => {
+             //if (window.bootstrap && carouselRef.current) {        
+               //new window.bootstrap.Carousel(carouselRef.current).cycle();
+            //}
+        //}, []);
+
         useEffect(() => {
-             if (window.bootstrap && carouselRef.current) {        
-               new window.bootstrap.Carousel(carouselRef.current).cycle();
-            }
+            const interval = setInterval(() => {
+                if (window.bootstrap && typeof window.bootstrap.Carousel === 'function' && carouselRef.current) {
+                    new window.bootstrap.Carousel(carouselRef.current).cycle();
+                    clearInterval(interval); // Stop checking once it's ready
+                }
+            }, 100); // Check every 100ms
+        
+            return () => clearInterval(interval); // Cleanup the interval on unmount
         }, []);
+        
 
     
     const variantsDTPFooter2 = {
