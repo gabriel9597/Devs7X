@@ -57,9 +57,14 @@ function Servicos() {
     } 
 
     const carouselRef = useRef(null);
-    if (carouselRef.current) {
-        new window.bootstrap.Carousel($("#carouselExampleSlidesOnly")).cycle()
-    }
+    useEffect(() => {
+        
+        if (window.bootstrap && carouselRef.current) {
+            
+            const carousel = new window.bootstrap.Carousel(carouselRef.current);
+            carousel.cycle();
+        }
+    }, []);
     
 
 
