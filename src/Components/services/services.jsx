@@ -61,8 +61,7 @@ function Servicos() {
         
         if (window.bootstrap && carouselRef.current) {
             
-            const carousel = new window.bootstrap.Carousel(carouselRef.current);
-            carousel.cycle();
+            const carousel = new window.bootstrap.Carousel(carouselRef.current).carousel.cycle();
         }
     }, []);
     
