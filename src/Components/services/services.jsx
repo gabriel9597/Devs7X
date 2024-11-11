@@ -28,6 +28,7 @@ import ImgBenf3 from "../../Images/imgbeneficios3.2.png";
 import ImgBenf4 from "../../Images/imgbeneficios4.2.png";
 import {motion} from "framer-motion";
 import bootstrap from 'bootstrap';
+
 function Servicos() {
     const multipleItemCarousel = document.querySelector("#carouselSliderServices") 
     if(window.matchMedia("{min-width:576px}").matches) {
