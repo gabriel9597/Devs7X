@@ -27,6 +27,7 @@ import ImgBenf2 from "../../Images/imgbeneficios2.2.png";
 import ImgBenf3 from "../../Images/imgbeneficios3.2.png";
 import ImgBenf4 from "../../Images/imgbeneficios4.2.png";
 import {motion} from "framer-motion";
+import $ from 'jquery';
 function Servicos() {
     const multipleItemCarousel = document.querySelector("#carouselSliderServices") 
     if(window.matchMedia("{min-width:576px}").matches) {
@@ -58,7 +59,7 @@ function Servicos() {
     const carouselRef = useRef(null);
     useEffect(() => {
         if (carouselRef.current) {
-        new window.bootstrap.Carousel(carouselRef.current).cycle();
+        new window.bootstrap.Carousel($("#carouselExampleSlidesOnly")).cycle()
         }
 }, []);
 
