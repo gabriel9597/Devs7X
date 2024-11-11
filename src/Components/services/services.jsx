@@ -185,7 +185,6 @@ function Servicos() {
                 </div>
             </motion.section>
 
-
             <motion.section className='Services-Section'>
                 <motion.div ref={Mov2} variants={variantsRTLServPage} initial="initial" whileInView="animate" id="carouselSliderServices" className="carousel slider-container slide">
                     <div className="carousel-indicators">
