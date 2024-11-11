@@ -57,11 +57,10 @@ function Servicos() {
     } 
 
     const carouselRef = useRef(null);
-    useEffect(() => {
-        if (carouselRef.current) {
+    if (carouselRef.current) {
         new window.bootstrap.Carousel($("#carouselExampleSlidesOnly")).cycle()
-        }
-}, []);
+    }
+    
 
 
     const variantsDTPFooter2 = {
