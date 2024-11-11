@@ -27,7 +27,6 @@ import ImgBenf2 from "../../Images/imgbeneficios2.2.png";
 import ImgBenf3 from "../../Images/imgbeneficios3.2.png";
 import ImgBenf4 from "../../Images/imgbeneficios4.2.png";
 import {motion} from "framer-motion";
-import bootstrap from 'bootstrap';
 
 function Servicos() {
     const multipleItemCarousel = document.querySelector("#carouselSliderServices") 
@@ -424,8 +423,6 @@ function Servicos() {
                         <motion.p className='copyright'><FaCopyright /> CopyRight 2024 - Devs7x International - Todos os Direitos Reservados</motion.p>
                     </div>
             </section>
-
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </div>    
   )
 
