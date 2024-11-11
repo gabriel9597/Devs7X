@@ -57,12 +57,13 @@ function Servicos() {
     } 
 
     const carouselRef = useRef(null);
-    useEffect(() => {
-        
-        if (window.bootstrap && carouselRef.current) {        
-         new window.bootstrap.Carousel(carouselRef.current).cycle();
-        }
-    }, []);
+    
+        useEffect(() => {
+             if (window.bootstrap || carouselRef.current) {        
+                new window.bootstrap.Carousel(carouselRef.current).cycle();
+            }
+        }, []);
+    
     
     const variantsDTPFooter2 = {
         initial: {
@@ -414,6 +415,12 @@ function Servicos() {
             </section>
     </div>    
   )
+
+    useEffect(() => {
+      if (window.bootstrap && carouselRef.current) {        
+        new window.bootstrap.Carousel(carouselRef.current).cycle();
+      }
+    }, []);
 }
 
 export default Servicos;
