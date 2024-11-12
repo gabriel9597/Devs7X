@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useRef} from 'react';
 import "./inicio.css";
 import { Link } from 'react-router-dom';
 import Logo from "../../Images/Devs7X_New_Logo_1.png";
