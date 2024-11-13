@@ -22,10 +22,10 @@ import ImgServ1 from "../../Images/serviceimg1.png";
 import ImgServ2 from "../../Images/serviceimg2.jpg";
 import ImgServ3 from "../../Images/serviceimg3.png";
 import ImgServ4 from "../../Images/serviceimg4.png";
-import ImgBenf1 from "../../Images/imgbeneficios1.7.png";
-import ImgBenf2 from "../../Images/imgbeneficios2.4.png";
-import ImgBenf3 from "../../Images/imgbeneficios3.4.png";
-import ImgBenf4 from "../../Images/imgbeneficios4.4.png";
+import ImgBenf1 from "../../Images/imgbeneficios1.8.png";
+import ImgBenf2 from "../../Images/imgbeneficios2.5.png";
+import ImgBenf3 from "../../Images/imgbeneficios3.5.png";
+import ImgBenf4 from "../../Images/imgbeneficios4.5.png";
 import {motion} from "framer-motion";
 
 function Servicos() {
