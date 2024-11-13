@@ -23,9 +23,9 @@ import ImgServ2 from "../../Images/serviceimg2.jpg";
 import ImgServ3 from "../../Images/serviceimg3.png";
 import ImgServ4 from "../../Images/serviceimg4.png";
 import ImgBenf1 from "../../Images/imgbeneficios1.8.png";
-import ImgBenf2 from "../../Images/imgbeneficios2.5.png";
-import ImgBenf3 from "../../Images/imgbeneficios3.5.png";
-import ImgBenf4 from "../../Images/imgbeneficios4.5.png";
+import ImgBenf2 from "../../Images/imgbeneficios2.6.png";
+import ImgBenf3 from "../../Images/imgbeneficios3.6.png";
+import ImgBenf4 from "../../Images/imgbeneficios4.6.png";
 import {motion} from "framer-motion";
 
 function Servicos() {
@@ -132,7 +132,7 @@ function Servicos() {
 
     const Mov2 = useRef();
 
-    
+
 
   return (
     <div className="">
