@@ -57,24 +57,18 @@ function Servicos() {
     } 
 
     const carouselRef = useRef(null);
-    
-        //useEffect(() => {
-             //if (window.bootstrap && carouselRef.current) {        
-               //new window.bootstrap.Carousel(carouselRef.current).cycle();
-            //}
-        //}, []);
 
-        useEffect(() => {
-            const interval = setInterval(() => {
-                if (window.bootstrap && typeof window.bootstrap.Carousel === 'function' && carouselRef.current) {
-                    console.log(window.bootstrap)
-                    new window.bootstrap.Carousel(carouselRef.current).cycle();
-                    clearInterval(interval);
-                }
-            }, 100);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (window.bootstrap && typeof window.bootstrap.Carousel === 'function' && carouselRef.current) {
+                console.log(window.bootstrap)
+                new window.bootstrap.Carousel(carouselRef.current).cycle();
+                clearInterval(interval);
+            }
+        }, 100);
 
-            return () => clearInterval(interval);
-        }, []);
+        return () => clearInterval(interval);
+    }, []);
         
     const variantsDTPFooter2 = {
         initial: {
