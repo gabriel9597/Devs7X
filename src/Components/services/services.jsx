@@ -29,7 +29,7 @@ import ImgBenf4 from "../../Images/imgbeneficios4.3.png";
 import {motion} from "framer-motion";
 
 function Servicos() {
-    const multipleItemCarousel = document.querySelector("#carouselSliderServices") 
+     
     if(window.matchMedia("{min-width:576px}").matches) {
         
         const carouselWidth = document.querySelector("#carouselSliderServices .carousel-slider-inner")[0].scrollWidth;
