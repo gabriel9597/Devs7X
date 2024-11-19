@@ -142,9 +142,7 @@
     text-decoration: none !important;
 }
 
-.btn-A2{
-    margin-left: 15px;
-}
+
 
 .Main-Img {
     width: 100%;
@@ -1046,10 +1044,10 @@ Cason n√£o tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o n√
     }
 }
 
-@media (min-width: 506px) and (max-width: 516px) {
-    /*.about-section .btn-A2 {
-        margin-top: 15px;
-    }*/
+@media (min-width: 506px)  {
+    .btn-A2{
+        margin-left: 15px;
+    }
 }
 
 @media (max-width: 505px) {
