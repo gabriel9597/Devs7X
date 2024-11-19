@@ -634,8 +634,8 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 
     .Hero-Col-Right {
         width: 650px;
-        /*margin-left: 7%;*/
         margin-top: 30px;
+        margin-left: -20px;
     }
 
     .Main-Img {
