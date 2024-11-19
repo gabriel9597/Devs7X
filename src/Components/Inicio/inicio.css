@@ -180,7 +180,7 @@
 .Card .Titles-Ex2,
 .Card .Titles-Ex3,
 .Card .Titles-Ex4 /* Analisar depois para ver se precisar√° editar na parte da responsividade
-Cason n√£o tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o n√∫mero 1) */ {
+Caso n√£o tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o n√∫mero 1) */ {
     color: var(--text-color);
     font-size: 1.3rem;
     overflow: hidden;
@@ -357,7 +357,6 @@ Cason n√£o tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o n√
     background-color: transparent;
     font-size: 40px;
     margin-right: 0px;
-  /*margin-left: -170px;*/
     top: 38%;
     position: absolute !important;
 }
@@ -374,10 +373,6 @@ Cason n√£o tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o n√
     position: absolute !important;
 }
 
-.Testimonial-Icon-Right path { /*Analisar melhor depois*/
-    /*color: var(--icons-color);*/
-}
-
 .cta-section {
     background-image: url("../../Images/img-cta4.jpg");
     color: var(--text-color);
@@ -391,16 +386,6 @@ Cason n√£o tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o n√
     justify-content: space-between;
     background-color: transparent;
 }
-
-/*.Cta-Text::after {
-    position: absolute;
-    content: '';
-    width: 100px;
-    height: 100px;
-    bottom: -8px;
-    left: -8px;
-    background-color: red;
-}*/
 
 .center-cta {
     background-color: transparent;
@@ -506,7 +491,7 @@ Cason n√£o tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o n√
 }
 
 .footer-col4 {
-    padding-top: 57px /*54px*/;
+    padding-top: 57px;
 }
 
 .link-Rs {
@@ -786,11 +771,6 @@ Cason n√£o tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o n√
         width: 100%;
     }
 
-    .navbar-nav .nav-item .nav-link.S::after,
-    .navbar-nav .nav-item .nav-link.T::after {
-        
-    }
-
     .Menu-icons {
         margin-right: 5px;
         font-size: 24px;
@@ -1058,13 +1038,6 @@ Cason n√£o tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o n√
     }
 }
 
-@media (max-width: 500px) {
-    /*.Logo {
-        width: 130px;
-        height: 120px
-    }*/
-}
-
 @media (max-width: 472px) {
     .Lines::before {
         margin-right: -30px !important;
@@ -1150,7 +1123,7 @@ Cason n√£o tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o n√
     .total .thumbnail img {
         width: 87%;
         height: 90%;
-        /*margin-top: 40px;*/
+        
     }
     .total .aside > p {
         font-size: 14px;
@@ -1183,9 +1156,6 @@ Cason n√£o tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o n√
 }
 
 @media (max-width: 393px) {
-    /*.Hero-Col-Right {
-        width: 600px;
-    }*/
 
     .total .aside .name h4 {
         margin-left: 56px;

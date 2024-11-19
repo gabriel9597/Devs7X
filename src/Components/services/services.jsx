@@ -99,7 +99,7 @@ function Servicos() {
             }
         }
     }
-
+    
     const variantsLTRServPage = {
         initial: {
         x: -300,
