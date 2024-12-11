@@ -74,7 +74,7 @@ function Contato() {
 
     const Mov3 = useRef();
 
-     return (
+     return <>
         <div>
             <header className='header w-100 d-flex align-items-center z-3'>
                 <nav className="navbar navbar-expand-lg bg-transparent" aria-label="Offcanvas navbar large">
@@ -220,7 +220,13 @@ function Contato() {
                     </div>
             </section>
         </div>
-    )
+
+            <div className='fixed-bottom p-3 bg-transparent' style={{zIndex: "7", left: "initial" }} >
+                <a href='https://wa.me/11982747281' target='_blank'>
+                    <img src={WhatsappLogo} width="60" alt='Logo do Whatsapp'/>
+                </a>
+            </div>
+    </>
 }
 
 export default Contato;
