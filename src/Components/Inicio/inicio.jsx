@@ -31,7 +31,7 @@ import TestImg1 from "../../Images/testimg1.2.jpg";
 import TestImg2 from "../../Images/imgtest2.v.jpg";
 import TestImg3 from "../../Images/imgtest3.jpg";
 import TestImg4 from "../../Images/imgtest4.jpg";
-import WhatsappLogo from "../../Images/logowhatsapp.png"
+import WhatsappLogo from "../../Images/logowhatsapp.png";
 import {motion} from "framer-motion";
 
 function Inicio() { 

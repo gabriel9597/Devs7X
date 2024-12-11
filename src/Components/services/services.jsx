@@ -26,6 +26,7 @@ import ImgBenf1 from "../../Images/imgbeneficios1.8.png";
 import ImgBenf2 from "../../Images/imgbeneficios2.6.png";
 import ImgBenf3 from "../../Images/imgbeneficios3.6.png";
 import ImgBenf4 from "../../Images/imgbeneficios4.6.png";
+import WhatsappLogo from "../../Images/logowhatsapp.png";
 import {motion} from "framer-motion";
 
 function Servicos() {

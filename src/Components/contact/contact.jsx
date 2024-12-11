@@ -15,6 +15,7 @@ import {
     FaTv
  } from 'react-icons/fa6';
 import ContHero from "../../Images/conthero2.png";
+import WhatsappLogo from "../../Images/logowhatsapp.png";
 import emailjs from "@emailjs/browser";
 import {motion} from "framer-motion";
 
