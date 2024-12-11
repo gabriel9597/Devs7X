@@ -419,7 +419,13 @@ function Servicos() {
                         <motion.p className='copyright'><FaCopyright /> CopyRight 2024 - Devs7x International - Todos os Direitos Reservados</motion.p>
                     </div>
             </section>
-    </div>    
+    </div>  
+
+            <div className='fixed-bottom p-3 bg-transparent' style={{zIndex: "7", left: "initial" }} >
+                <a href='https://wa.me/11982747281' target='_blank'>
+                    <img src={WhatsappLogo} width="60" alt='Logo do Whatsapp'/>
+                </a>
+            </div>  
 </>
 
 }
