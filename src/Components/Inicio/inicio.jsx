@@ -31,6 +31,7 @@ import TestImg1 from "../../Images/testimg1.2.jpg";
 import TestImg2 from "../../Images/imgtest2.v.jpg";
 import TestImg3 from "../../Images/imgtest3.jpg";
 import TestImg4 from "../../Images/imgtest4.jpg";
+import WhatsappLogo from "../../Images/logowhatsapp.png"
 import {motion} from "framer-motion";
 
 function Inicio() { 
@@ -112,7 +113,8 @@ function Inicio() {
     
     const Mov = useRef();
 
-    return <div className="Uni-Cont">
+    return <>
+    <div className="Uni-Cont">
             <header className='header w-100 d-flex align-items-center z-3'>
                 <nav className="navbar navbar-expand-lg bg-transparent" aria-label="Offcanvas navbar large">
                     <Link to="/" className='Link-Logo me-auto'><motion.img  initial={{ opacity: 0, x: -250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className='Logo' src={Logo} alt="Logo"/></Link>
@@ -434,6 +436,13 @@ function Inicio() {
                     </div>
             </section>
     </div>
+
+            <div className='fixed-bottom p-3 bg-transparent' style={{zIndex: "7", left: "initial" }} >
+                <a href='https://wa.me/11982747281' target='_blank'>
+                    <img src={WhatsappLogo} width="60" alt='Logo do Whatsapp'/>
+                </a>
+            </div>
+</>
 }
 
 export default Inicio;
