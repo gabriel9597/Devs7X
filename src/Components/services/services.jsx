@@ -133,11 +133,9 @@ function Servicos() {
 
     const Mov2 = useRef();
 
-
-
-  return <>
-    <div className="">
-        <header className='header w-100 d-flex align-items-center z-3'>
+    return <>
+        <div className="">
+            <header className='header w-100 d-flex align-items-center z-3'>
                 <nav className="navbar navbar-expand-lg bg-transparent" aria-label="Offcanvas navbar large">
                     <Link to="/" className='Link-Logo me-auto'><motion.img initial={{ opacity: 0, x: -250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className='Logo' src={Logo} alt="Logo"/></Link>
                     
