@@ -101,12 +101,6 @@
     padding: 20px;
 }
 
-.zap-button,
-.zap-button a,
-.zap-button img {
-    background-color: transparent !important;
-}
-
 /* BreakPoints */
 
 @media (min-width: 1250px) {
