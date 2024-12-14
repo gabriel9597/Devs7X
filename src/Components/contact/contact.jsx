@@ -221,7 +221,7 @@ function Contato() {
             </section>
         </div>
 
-            <motion.div initial={{ opacity: 0, x: 250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className='fixed-bottom p-3 bg-transparent' style={{zIndex: "7", left: "initial" }} >
+            <motion.div initial={{ opacity: 0, x: 250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className='fixed-bottom p-3 zap-button' style={{zIndex: "7", left: "initial" }} >
                 <a href='https://wa.me/11982747281' target='_blank'>
                     <img src={WhatsappLogo} width="60" alt='Logo do Whatsapp'/>
                 </a>
