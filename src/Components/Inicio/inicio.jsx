@@ -443,6 +443,7 @@ function Inicio() {
                 </a>
             </motion.div>
 </>
+
 }
 
 export default Inicio;
