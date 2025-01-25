@@ -138,7 +138,7 @@ function Contato() {
                         </div>
 
                         <div className="item2">
-                            <h2>Horário de Funcionamebto</h2>
+                            <h2>Horário de Funcionamento</h2>
                             <span>08:00H as 17:00H</span>
                         </div>
 
