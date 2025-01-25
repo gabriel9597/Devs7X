@@ -145,8 +145,7 @@ function Contato() {
                         <div className="item3">
                             <h2>Telefone para Contato:</h2>
                             <span>(11) 98274-7281</span>
-                        </div>
-                        
+                        </div>       
                     </div>
 
                     <div className="formContact">
