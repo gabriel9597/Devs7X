@@ -415,7 +415,7 @@ function Servicos() {
                             </motion.div>
                         </div>
                         <hr />
-                        <motion.p className='copyright'><FaCopyright /> CopyRight 2024 - Devs7x International - Todos os Direitos Reservados</motion.p>
+                        <motion.p className='copyright'><FaCopyright /> CopyRight 2025 - Devs7x International - Todos os Direitos Reservados</motion.p>
                     </div>
             </section>
     </div>  

@@ -215,7 +215,7 @@ function Contato() {
 
                         <hr />
                         
-                        <p className='copyright'><FaCopyright /> CopyRight 2024 - Devs7x International - Todos os Direitos Reservados</p>   
+                        <p className='copyright'><FaCopyright /> CopyRight 2025 - Devs7x International - Todos os Direitos Reservados</p>   
                     </div>
             </section>
         </div>
