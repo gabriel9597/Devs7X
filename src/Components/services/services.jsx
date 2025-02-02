@@ -1,5 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import Usa_Flag from "../../Images/langavaiUSA.png";
+import Brazil_Flag from "../../Images/langavaiBR.png";
 import Logo from '../../Images/Devs7X_New_Logo_1.png';
 import "./services.css";
 
@@ -135,6 +137,19 @@ function Servicos() {
 
     return <>
         <div className="">
+            <motion.div ref={Mov2} variants={variantsTTDServPage} initial="initial" whileInView="animate" className="Langs-Available">
+                <h5>Linguagens Disponíveis</h5>
+                <div className='Flags_Of_Langs'>
+                    <Link to="/Services-EngVersion">
+                        <img className='USA' src={Usa_Flag} alt="Bandeira que indica que a Linguagem Americana disponível"/>
+                    </Link>
+                    
+                    <Link to="#">
+                        <img className='BR' src={Brazil_Flag} alt="Bandeira que indica que a Linguagem Português do Brasil disponível" />
+                    </Link>
+                </div>
+            </motion.div>
+
             <header className='header w-100 d-flex align-items-center z-3'>
                 <nav className="navbar navbar-expand-lg bg-transparent" aria-label="Offcanvas navbar large">
                     <Link to="/" className='Link-Logo me-auto'><motion.img initial={{ opacity: 0, x: -250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className='Logo' src={Logo} alt="Logo"/></Link>
@@ -422,7 +437,7 @@ function Servicos() {
 
             <motion.div initial={{ opacity: 0, x: 250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className='fixed-bottom p-3 bg-transparent' style={{zIndex: "7", left: "initial" }} >
                 <a href='https://wa.me/11982747281' target='_blank'>
-                    <img src={WhatsappLogo} width="60" alt='Logo do Whatsapp'/>
+                    <img src={WhatsappLogo} width="60" className='zap-button' alt='Logo do Whatsapp'/>
                 </a>
             </motion.div>  
 </>

@@ -692,6 +692,10 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 
 @media (min-width: 992px) {
 
+    .Align-Desk {
+        margin-left: 20px;
+    }
+
     .Menu-icons,
     .btn-M2,
     .Sm-Link,

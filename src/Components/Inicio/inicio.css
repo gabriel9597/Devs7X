@@ -1,18 +1,36 @@
+.Langs-Available {
+    margin-left: auto;
+    width: 310px;
+}
+
+.Langs-Available h5 {
+    color: #fff;
+    overflow: hidden;
+}
 
 
 
 
+.Flags_Of_Langs {
+    display: flex;
+    margin: 0 auto;
+    width: 152px;
+}
 
+.Flags_Of_Langs .USA,
+.Flags_Of_Langs .BR {
+    width: 32px;
+}
 
-
-
-
+.Flags_Of_Langs .USA {
+    margin-right: 15px;
+}
 
 .header {
     
     top: 0;
     left: 0;
-    padding: 2rem 4%;
+    padding: 0rem 4% 4% 2rem;
 }
 
 .Link-Logo {
@@ -31,6 +49,7 @@
 
 .navbar {
     width: 100%;
+    --bs-navbar-padding-y: 0rem !important;
 }
 .navbar-nav {
     flex-direction: row !important;
@@ -508,6 +527,10 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
     text-align: center;
 }
 
+.zap-button {
+    background-color: transparent;
+}
+
 /* BreakPoints */
 
 @media (max-width: 1400px) {
@@ -692,6 +715,10 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 
 @media (min-width: 992px) {
 
+    .Flags_Of_Langs .USA {
+        width: 35px;
+    }
+
     .Menu-icons,
     .btn-M2,
     .Sm-Link,
@@ -720,6 +747,28 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 }
 
 @media (max-width: 991px) {
+
+    .Langs-Available {
+        width: 128px;
+    }
+
+    .Langs-Available h5 {
+        text-align: center;
+    }
+
+    .Flags_Of_Langs {
+        flex-direction: column;
+    }
+
+    .Flags_Of_Langs .USA,
+    .Flags_Of_Langs .BR {
+        margin: 0 43px;
+        /*margin: 0 0 0 28.5%*/
+    }
+
+    .Flags_Of_Langs .BR {
+        margin-top: 20px !important;
+    }
 
     .navbar {
         padding: 0 !important;
@@ -902,7 +951,22 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
     }
 }
 
+@media (max-width: 850px) {
+    .Langs-Available h5 {
+        margin-left: 5px;
+    }
+
+    .Flags_Of_Langs {
+        margin: 0 0 0 5%;
+    }
+}
+
 @media (max-width: 767px) {
+
+    .Flags_Of_Langs {
+        margin: 0 0 0 8%;
+    }
+
     .Lines::after, .Lines::before {
         width: 35%;
         margin: auto -40px;
@@ -966,6 +1030,10 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 }
 
 @media (max-width: 670px) {
+
+    .Langs-Available {
+        width: 125px;
+    }
     .footer-cont h5 {
         font-size: 1.1rem;
         padding: 0 20px;
@@ -982,6 +1050,13 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 }
 
 @media (max-width: 576px) {
+    .Langs-Available {
+        width: 123px;
+    }
+
+    .Flags_Of_Langs .USA, .Flags_Of_Langs .BR {
+        margin: 0px 42px;
+    }
 }
 
 @media (max-width: 572px) {
@@ -1013,6 +1088,19 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 }
 
 @media (max-width: 520px) {
+
+    .Langs-Available {
+        width: 108px
+    }
+
+    .Langs-Available h5 {
+        font-size: 17px;
+    }
+
+    .Flags_Of_Langs .USA,
+    .Flags_Of_Langs .BR {
+        margin: 0 31px;
+    }
 
     .Logo {
         width: 165px;
@@ -1056,6 +1144,17 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 }
 
 @media (max-width: 450px) {
+
+    .Langs-Available h5 {
+        font-size: 16px;
+        margin-left: 13px;
+    }
+
+    .Flags_Of_Langs .USA, .Flags_Of_Langs .BR {
+        margin: 0px 35px;
+    }
+
+
     .Logo {
         width: 150px;
         height: 140px;
@@ -1156,6 +1255,10 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 }
 
 @media (max-width: 393px) {
+
+    .Flags_Of_Langs {
+        margin: 0 0 0 10%;
+    }
 
     .total .aside .name h4 {
         margin-left: 56px;
