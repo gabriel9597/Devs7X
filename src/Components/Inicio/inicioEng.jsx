@@ -202,10 +202,10 @@ function InicioEng() {
                     </div>
 
                     <div className="CardEx-Items d-flex overflow-hidden">
-                        <div className="Card d-flex"><img src={ImgEx1} alt="Institutional Website Template"/><span className="Titles-Ex1">Institucional</span></div>
+                        <div className="Card d-flex"><img src={ImgEx1} alt="Institutional Website Template"/><span className="Titles-Ex1">Institutional</span></div>
                         <div className="Card d-flex"><img src={ImgEx2} alt="E-Commerce Website Template"/><span className="Titles-Ex2">E-Commerce</span></div>
                         <div className="Card d-flex"><img src={ImgEx3} alt="PreSell Website Template"/><span className="Titles-Ex3">PreSell</span></div>
-                        <div className="Card d-flex"><img src={ImgEx4} alt="Style Plataform Website Template"/><span className="Titles-Ex4">Plataform</span></div>
+                        <div className="Card d-flex"><img src={ImgEx4} alt="Style Platform Website Template"/><span className="Titles-Ex4">Platform</span></div>
                     </div>
                 </div>
             </motion.section>
