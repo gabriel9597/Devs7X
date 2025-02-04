@@ -6,8 +6,6 @@ import Logo from '../../Images/Devs7X_New_Logo_1.png';
 import "./contactEng.css";
 
 import { MdOutlineMail } from "react-icons/md";
-
-
 import { 
     FaBars,
     FaCopyright,
