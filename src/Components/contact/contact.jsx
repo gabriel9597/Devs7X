@@ -144,9 +144,9 @@ function Contato() {
                             <div className='footer-header'>
                                 <h6>Entre em Contato Também por esses Meios:</h6>
                                 <div className='fh-icons'>
-                                    <a href='https://www.instagram.com/devs7x.st/' className='link-Rs'> <FaSquareInstagram className='footer-icons'/> </a>
+                                    <a href='https://www.instagram.com/devs7x_institucional/' className='link-Rs'> <FaSquareInstagram className='footer-icons'/> </a>
                                     <a href='https://api.whatsapp.com/send?phone=5511982747281' className='link-Rs'> <FaSquareWhatsapp className='footer-icons'/> </a>
-                                    <Link className='link-Rs'> <MdOutlineMail className='footer-icons' /> </Link>
+                                    <a href="mailto:gabrieldevs7x@gmail.com" className='link-Rs'><MdOutlineMail className='footer-icons'/></a>
                                 </div>
                             </div>
                         </div>
@@ -237,9 +237,9 @@ function Contato() {
                             <motion.div  variants={variantsDTPFooter3} initial="initial" whileInView="animate" className="footer-col4">
                                 <ul>
                                     <h5>Conheça-Nos e Tire Qualquer Dúvida Também por Esses Meios:</h5>
-                                    <a href='https://www.instagram.com/devs7x.st/' className='link-Rs'> <FaSquareInstagram className='footer-icons'/> </a>
+                                    <a href='https://www.instagram.com/devs7x_institucional/' className='link-Rs'> <FaSquareInstagram className='footer-icons'/> </a>
                                     <a href='https://api.whatsapp.com/send?phone=5511982747281' className='link-Rs'> <FaSquareWhatsapp className='footer-icons'/></a>
-                                    <Link className='link-Rs'> <MdOutlineMail className='footer-icons' /> </Link>
+                                    <a href="mailto:gabrieldevs7x@gmail.com" className='link-Rs'><MdOutlineMail className='footer-icons'/></a>
                                 </ul>
                             </motion.div>
                         </div>
