@@ -1,7 +1,7 @@
 :root {
-    --button-color: red;
+    --button-color: #dd1212;
     --text-color: white;
-    --items-color: red;
+    --items-color: #dd1212;
 }
 
 .navbar-nav .nav-link.active {
