@@ -63,7 +63,7 @@ function Contato() {
 
     const variantsTTDContPage = {
         initial: {
-            y: -100,
+            y: -55,
             opacity: 0
             },
             animate: {

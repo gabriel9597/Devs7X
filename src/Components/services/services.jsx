@@ -90,7 +90,7 @@ function Servicos() {
 
     const variantsTTDServPage = {
         initial: {
-            y: -100,
+            y: -55,
             opacity: 0
             },
             animate: {
