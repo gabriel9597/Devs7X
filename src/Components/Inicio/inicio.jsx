@@ -255,7 +255,6 @@ function Inicio() {
                             <button type="button" className="btn btn-A2 btn-lg px-4">
                                 <Link className='C-Link' to="/Contato">Entre em Contato!</Link>
                             </button>
-
                         </div>
                     </div>
                 </motion.div>
