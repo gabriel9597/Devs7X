@@ -1,10 +1,11 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import "./inicio.css";
 import { Link } from 'react-router-dom';
 import Usa_Flag from "../../Images/langavaiUSA.png";
 import Brazil_Flag from "../../Images/langavaiBR.png";
 import Logo from "../../Images/Devs7X_New_Logo_1.png";
 
+import ChatBot_Logo from "../../Images/Devs7xChatBotLogo.png";
 import MainImg from "../../Images/MainImg7V.png";
 import ImgEx1 from "../../Images/imgex1.jpg";
 import ImgEx2 from "../../Images/imgex2v.png";
@@ -24,15 +25,19 @@ import {
     FaSquareWhatsapp,
     FaTv
 } from "react-icons/fa6";
-import { 
+import {
+    IoIosArrowUp, 
     IoIosArrowBack,
-    IoIosArrowForward
+    IoIosArrowForward,
+    IoIosArrowDown
 } from "react-icons/io";
 import { MdOutlineMail } from "react-icons/md";
 import TestImg1 from "../../Images/testimg1.2.jpg";
 import TestImg2 from "../../Images/imgtest2.v.jpg";
 import TestImg3 from "../../Images/imgtest3.jpg";
 import TestImg4 from "../../Images/imgtest4.jpg";
+import { BsChatLeftTextFill } from "react-icons/bs";
+import { ChatbotInfo } from "../../ChatbotInfo.js";
 import WhatsappLogo from "../../Images/logowhatsapp.png";
 import {motion} from "framer-motion";
 
@@ -114,6 +119,62 @@ function Inicio() {
     }
     
     const Mov = useRef();
+
+    const [chatHistory, setChatHistory] = useState([{
+        hideInChat: true,
+        role: "model",
+        text: ChatbotInfo,
+     },
+    ]);
+    const [showChatbot, setShowChatBot] = useState(false);
+    const chatBodyRef = useRef();
+
+    const generateBotResponse = async (history) => {
+        const updateHistory = (text, isError = false) => {
+            setChatHistory((prev) => [...prev.filter((msg) => msg.text !== "Carregando..."), {role: "model", text, isError}])
+        }
+
+        history = history.map(({role, text}) => ({role, parts: [{text}] }));
+
+        const requestOptions = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({contents: history})
+        }
+
+        try {
+            const response = await fetch(import.meta.env.VITE_API_URL, requestOptions)
+            const data = await response.json();
+            if(!response.ok) throw new Error(data.error.message || "Opa, Algo Está Errado!")
+
+            const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim()
+            updateHistory(apiResponseText)
+        } catch (error) {
+            updateHistory(error.message, true)
+        }
+    }
+
+    useEffect(() => {
+        chatBodyRef.current.scrollTo({top: chatBodyRef.current.scrollHeight, behavior: "smooth"})
+    }, [chatHistory])
+
+    const inputRef = useRef();
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        const userMessage = inputRef.current.value.trim();
+        if (!userMessage) return;
+        inputRef.current.value = "";
+
+        setChatHistory((history) => [...history, { role: "user", text: userMessage }])
+
+        setTimeout(() => { 
+            setChatHistory((history) => [...history, { role: "model", text: "Carregando..."}]);
+        
+            generateBotResponse([...chatHistory, { role: "user", text: `Usando os detalhes fornecidos acima, responda a esta consulta: ${userMessage}`}])
+        }, 600);        
+    
+    }
 
     return <>
     <div className="Uni-Cont">
@@ -451,6 +512,53 @@ function Inicio() {
                     </div>
             </section>
     </div>
+
+            <div className={`CB-Cont ${showChatbot ? "show-CB" : ""}`}>
+                <motion.button initial={{ opacity: 0, x: -250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} onClick={() => setShowChatBot((prev) => !prev)} id="chat-toggler">
+                    <BsChatLeftTextFill className="Chat-Icon"/>
+                </motion.button>
+
+                <div className="CB-popup">
+                    <div className="chat-Header">
+                        <div className="header-info">
+                            <img src={ChatBot_Logo} alt="Logo do Chatbot" className='Chat-Logo'/>
+                            <h2 className="Logo_Text">Devs7X</h2>
+                        </div>
+                        <button onClick={() => setShowChatBot(prev => !prev)}>
+                            <IoIosArrowDown className="ATD-Chat-Icon"/>
+                        </button>
+                    </div>
+
+                    <div ref={chatBodyRef} className='chat-Body'>
+                        <div className="message bot-message">
+                            <img src={ChatBot_Logo} alt="Logo do Chatbot" className='S-Chat-Logo'/>
+                            <p className="message-text">
+                                Olá, Como posso te Ajudar?
+                            </p>
+                        </div>
+
+                        {chatHistory.map((chat, index) => (
+                            !chat.hideInChat && (
+                            <div key={index} className={`message ${chat.role === "model" ? "bot" : "user"}-message ${chat.isError ? "error" : "" }`}>
+                                {chat.role === "model" && <img src={ChatBot_Logo} alt="Logo do Chatbot" className='S-Chat-Logo'/>}
+                                <p className="message-text">
+                                    {chat.text}
+                                </p>
+                            </div>
+                        )))}
+                    </div>
+
+                    <div className="chat-Footer">
+                        <form action="#" className="chat-Form" onSubmit={handleFormSubmit}>
+                            <input ref={inputRef} type='text' placeholder='Mensagem...' className='message-input' required/>
+                            <button>
+                                <IoIosArrowUp className="ATP-Chat-Icon"/>
+                            </button>{/*Talvez Tirar*/}
+                        </form>
+                    </div>
+                </div>   
+            </div>
+
 
             <motion.div initial={{ opacity: 0, x: 250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className='fixed-bottom p-3 bg-transparent' style={{zIndex: "7", left: "initial" }} >
                 <a href='https://wa.me/11982747281' target='_blank'>

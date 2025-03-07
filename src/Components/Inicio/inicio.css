@@ -10,7 +10,6 @@
 
 
 
-
 .Flags_Of_Langs {
     display: flex;
     margin: 0 auto;
@@ -27,7 +26,6 @@
 }
 
 .header {
-    
     top: 0;
     left: 0;
     padding: 0rem 4% 4% 2rem;
@@ -526,6 +524,219 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 .copyright {
     text-align: center;
 }
+
+.CB-Cont {
+    width: 100%;
+    height: 100%;
+}
+
+#chat-toggler {
+    position: fixed;
+    bottom: 15px;
+    left: 17px;
+    border: none;
+    height: 64px;
+    width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #05079A;
+}
+
+#chat-toggler .Chat-Icon {
+    position: absolute;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.CB-popup {
+    position: fixed;
+    bottom: 7px;
+    left: 35px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.2);
+    width: 420px;
+    min-height: 550px;
+    max-height: 550px;
+    /*overflow: hidden;*/
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    transition: all 0.1s ease;
+    scrollbar-width: thin;
+    scrollbar-color: #09025e transparent;
+}
+
+.CB-Cont.show-CB .CB-popup {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.CB-popup .chat-Header {
+    background-color: var(--items-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 22px;
+}
+
+.chat-Header .header-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: transparent !important;
+}
+
+.chat-Header button {
+    width: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.9rem;
+    padding-top: 2px;
+    margin-right: -10px;
+    background-color: var(--items-color);
+}
+
+.header-info .Chat-Logo {
+    height: 50px;
+    width: 50px;
+    flex-shrink: 0;
+    background-color: transparent;
+}
+
+.Logo_Text {
+    color: white;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.ATD-Chat-Icon {
+    background-color: transparent;
+}
+
+.S-Chat-Logo {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+}
+
+.chat-Body {
+    display: flex;
+    flex-direction: column;
+    /*height: 460px;*/
+    margin-bottom: /*282px*/ 16rem;/*69%;*/
+    overflow-y: auto;
+    padding: 25px 22px;
+    background-color: white;
+    scrollbar-width: thin;
+    scrollbar-color: #09025e transparent;
+}
+
+.chat-Body .message {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.chat-Body .message.error .message-text {
+    color: red;
+}
+.chat-Body .bot-message,
+.chat-Body .user-message,
+.chat-Body .message-text{
+    background-color: #fff;
+    color: #fff;
+}
+
+.chat-Body .message .message-text {
+    padding: 12px 16px;
+    max-width: 75%;
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+
+.chat-Body .bot-message .message-text {
+    background: var(--items-color);;
+    border-radius: 14px 14px 14px 4px;
+}
+
+
+.chat-Body .user-message {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.chat-Body .user-message .message-text {
+    color: #fff;
+    background: #09025e;
+    border-radius: 14px 14px 4px 14px;
+}
+
+.chat-Footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background:#fff;
+    padding: 15px 22px 20px
+}
+
+.chat-Footer .chat-Form {
+    display: flex;
+    align-items: center;
+    background: var(--button-color);
+    border-radius: 32px;
+    outline: 1px solid #CCCCE5;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.06);
+    padding: 15px;
+}
+
+.chat-Footer .chat-Form {
+    outline: 2px solid var(--items-color)
+}
+
+.chat-Form .message-input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    padding: 0 17px;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.message-input::placeholder {
+    color: #fff;
+}
+
+.chat-Form button {
+    color: #fff;
+    /*height: 30px;*/
+    width: 30px;
+    border: none;
+    outline: none;
+    display: none;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: #09025e;
+}
+
+.chat-Form .message-input:valid~button {
+    display: block;
+}
+
+/*.Chat-Icon {
+    color: var(--Icons-Color);
+    font-size: 50px;
+}*/
 
 .zap-button {
     background-color: transparent;
@@ -1109,6 +1320,37 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 
     .Main-Img {
         width: 64%;
+    }
+
+    #chat-toggler {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .CB-popup {
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+
+    }
+
+    .CB-popup .chat-Header {
+        padding: 12px 15px;
+    }
+
+    .chat-Body {
+        height: calc(90% 55px);
+        padding: 25px 15px;
+    }
+
+    .chat-Footer {
+        padding: 10px 15px 15px
+    }
+
+    .chat-Footer .chat-Form {
+        width: 74%;
     }
 }
 

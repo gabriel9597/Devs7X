@@ -1,10 +1,12 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import "./inicioEng.css";
 import { Link } from 'react-router-dom';
 import Usa_Flag from "../../Images/langavaiUSA.png";
 import Brazil_Flag from "../../Images/langavaiBR.png";
-import Logo from "../../Images/Devs7X_New_Logo_1.png";
 
+
+import Logo from "../../Images/Devs7X_New_Logo_1.png";
+import ChatBot_Logo from "../../Images/Devs7xChatBotLogo.png";
 import MainImgEng from "../../Images/MainImgEngVersion.png";
 import ImgEx1 from "../../Images/imgex1.jpg";
 
@@ -25,15 +27,19 @@ import {
     FaSquareWhatsapp,
     FaTv
 } from "react-icons/fa6";
-import { 
+import {
+    IoIosArrowUp,
     IoIosArrowBack,
-    IoIosArrowForward
+    IoIosArrowForward,
+    IoIosArrowDown
 } from "react-icons/io";
 import { MdOutlineMail } from "react-icons/md";
 import TestImg1 from "../../Images/testimg1.2.jpg";
 import TestImg2 from "../../Images/imgtest2.v.jpg";
 import TestImg3 from "../../Images/imgtest3.jpg";
 import TestImg4 from "../../Images/imgtest4.jpg";
+import { BsChatLeftTextFill } from "react-icons/bs";
+import { ChatbotInfoEngV } from "../../ChatbotInfoEngV";
 import WhatsappLogo from "../../Images/logowhatsapp.png";
 import {motion} from "framer-motion";
 
@@ -113,6 +119,61 @@ function InicioEng() {
         }
       }
     }
+
+    const [chatHistory4, setChatHistory4] = useState([{
+            hideInChat4: true,
+            role: "model",
+            text: ChatbotInfoEngV,
+         },
+        ]);
+        const [showChatbot4, setShowChatBot4] = useState(false);
+        const chatBodyRef4 = useRef();
+    
+        const generateBotResponse4 = async (history4) => {
+            const updateHistory4 = (text, isError4 = false) => {
+                setChatHistory4((prev) => [...prev.filter((msg) => msg.text !== "Loading..."), {role: "model", text, isError4}])
+            }
+    
+            history4 = history4.map(({role, text}) => ({role, parts: [{text}] }));
+    
+            const requestOptions4 = {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({contents: history4})
+            }
+    
+            try {
+                const response4 = await fetch(import.meta.env.VITE_API_URL, requestOptions4)
+                const data4 = await response4.json();
+                if(!response4.ok) throw new Error(data4.error.message || "Hey, Something is Wrong!")
+    
+                const apiResponseText4 = data4.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim()
+                updateHistory4(apiResponseText4)
+            } catch (error) {
+                updateHistory4(error.message, true)
+            }
+        }
+    
+        useEffect(() => {
+            chatBodyRef4.current.scrollTo({top: chatBodyRef4.current.scrollHeight, behavior: "smooth"})
+        }, [chatHistory4])
+    
+        const inputRef4 = useRef();
+    
+        const handleFormSubmit = (e) => {
+            e.preventDefault();
+            const userMessage4 = inputRef4.current.value.trim();
+            if (!userMessage4) return;
+            inputRef4.current.value = "";
+    
+            setChatHistory4((history4) => [...history4, { role: "user", text: userMessage4 }])
+    
+            setTimeout(() => { 
+                setChatHistory4((history4) => [...history4, { role: "model", text: "Loading..."}]);
+            
+                generateBotResponse4([...chatHistory4, { role: "user", text: `Using the details provided above, please address this query: ${userMessage4}`}])
+            }, 600);        
+        }
     
     const Mov = useRef();
 
@@ -452,6 +513,52 @@ function InicioEng() {
                     </div>
             </section>
     </div>
+
+                        <div className={`CB-Cont ${showChatbot4 ? "show-CB" : ""}`}>
+                            <motion.button initial={{ opacity: 0, x: -250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} onClick={() => setShowChatBot4((prev) => !prev)} id="chat-toggler">
+                                <BsChatLeftTextFill className="Chat-Icon"/>
+                            </motion.button>
+            
+                            <div className="CB-popup">
+                                <div className="chat-Header">
+                                    <div className="header-info">
+                                        <img src={ChatBot_Logo} alt="Logo do Chatbot" className='Chat-Logo'/>
+                                        <h2 className="Logo_Text">Devs7X</h2>
+                                    </div>
+                                    <button onClick={() => setShowChatBot4(prev => !prev)}>
+                                        <IoIosArrowDown className="ATD-Chat-Icon"/>
+                                    </button>
+                                </div>
+            
+                                <div ref={chatBodyRef4} className='chat-Body'>
+                                    <div className="message bot-message">
+                                        <img src={ChatBot_Logo} alt="Logo do Chatbot" className='S-Chat-Logo'/>
+                                        <p className="message-text">
+                                            Hi, How We Can Help You?
+                                        </p>
+                                    </div>
+            
+                                    {chatHistory4.map((chat, index) => (
+                                        !chat.hideInChat4 && (
+                                        <div key={index} className={`message ${chat.role === "model" ? "bot" : "user"}-message ${chat.isError4 ? "error" : "" }`}>
+                                            {chat.role === "model" && <img src={ChatBot_Logo} alt="Logo do Chatbot" className='S-Chat-Logo'/>}
+                                            <p className="message-text">
+                                                {chat.text}
+                                            </p>
+                                        </div>
+                                    )))}
+                                </div>
+            
+                                <div className="chat-Footer">
+                                    <form action="#" className="chat-Form" onSubmit={handleFormSubmit}>
+                                        <input ref={inputRef4} type='text' placeholder='Message...' className='message-input' required/>
+                                        <button>
+                                            <IoIosArrowUp className="ATP-Chat-Icon"/>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>   
+                        </div>
 
             <motion.div initial={{ opacity: 0, x: 250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className='fixed-bottom p-3 bg-transparent' style={{zIndex: "7", left: "initial" }} >
                 <a href='https://wa.me/11982747281' target='_blank'>

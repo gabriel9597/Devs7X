@@ -1,10 +1,11 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Usa_Flag from "../../Images/langavaiUSA.png";
 import Brazil_Flag from "../../Images/langavaiBR.png";
 import Logo from '../../Images/Devs7X_New_Logo_1.png';
-import "./contactEng.css";
+import ChatBot_Logo from "../../Images/Devs7xChatBotLogo.png";
 
+import "./contactEng.css";
 import { MdOutlineMail } from "react-icons/md";
 import { 
     FaBars,
@@ -15,7 +16,13 @@ import {
     FaSquareWhatsapp,
     FaTv
  } from 'react-icons/fa6';
+ import {
+    IoIosArrowUp,
+    IoIosArrowDown
+} from "react-icons/io";
 import ContHero from "../../Images/conthero2.png";
+import { BsChatLeftTextFill } from "react-icons/bs";
+import { ChatbotInfoEngV } from "../../ChatbotInfoEngV";
 import WhatsappLogo from "../../Images/logowhatsapp.png";
 import emailjs from "@emailjs/browser";
 import {motion} from "framer-motion";
@@ -88,6 +95,61 @@ function ContatoEng() {
         }
       }
     }
+
+    const [chatHistory6, setChatHistory6] = useState([{
+                    hideInChat6: true,
+                    role: "model",
+                    text: ChatbotInfoEngV,
+                 },
+                ]);
+                const [showChatbot6, setShowChatBot6] = useState(false);
+                const chatBodyRef6 = useRef();
+            
+                const generateBotResponse6 = async (history6) => {
+                    const updateHistory6 = (text, isError6 = false) => {
+                        setChatHistory6((prev) => [...prev.filter((msg) => msg.text !== "Loading..."), {role: "model", text, isError6}])
+                    }
+            
+                    history6 = history6.map(({role, text}) => ({role, parts: [{text}] }));
+            
+                    const requestOptions6 = {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({contents: history6})
+                    }
+            
+                    try {
+                        const response6 = await fetch(import.meta.env.VITE_API_URL, requestOptions6)
+                        const data6 = await response6.json();
+                        if(!response6.ok) throw new Error(data6.error.message || "Hey, Something is Wrong!")
+            
+                        const apiResponseText6 = data6.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim()
+                        updateHistory6(apiResponseText6)
+                    } catch (error) {
+                        updateHistory6(error.message, true)
+                    }
+                }
+            
+                useEffect(() => {
+                    chatBodyRef6.current.scrollTo({top: chatBodyRef6.current.scrollHeight, behavior: "smooth"})
+                }, [chatHistory6])
+            
+                const inputRef6 = useRef();
+            
+                const handleFormSubmit = (e) => {
+                    e.preventDefault();
+                    const userMessage6 = inputRef6.current.value.trim();
+                    if (!userMessage6) return;
+                    inputRef6.current.value = "";
+            
+                    setChatHistory6((history6) => [...history6, { role: "user", text: userMessage6 }])
+            
+                    setTimeout(() => { 
+                        setChatHistory6((history6) => [...history6, { role: "model", text: "Loading..."}]);
+                    
+                        generateBotResponse6([...chatHistory6, { role: "user", text: `Using the details provided above, please address this query: ${userMessage6}`}])
+                    }, 600);        
+                }
 
     const Mov3 = useRef();
 
@@ -249,6 +311,53 @@ function ContatoEng() {
                     </div>
             </section>
         </div>
+
+            <div className={`CB-Cont ${showChatbot6 ? "show-CB" : ""}`}>
+                            <motion.button initial={{ opacity: 0, x: -250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} onClick={() => setShowChatBot6((prev) => !prev)} id="chat-toggler">
+                                <BsChatLeftTextFill className="Chat-Icon"/>
+                            </motion.button>
+            
+                            <div className="CB-popup">
+                                <div className="chat-Header">
+                                    <div className="header-info">
+                                        <img src={ChatBot_Logo} alt="Logo do Chatbot" className='Chat-Logo'/>
+                                        <h2 className="Logo_Text">Devs7X</h2>
+                                    </div>
+                                    <button onClick={() => setShowChatBot6(prev => !prev)}>
+                                        <IoIosArrowDown className="ATD-Chat-Icon"/>
+                                    </button>
+                                </div>
+            
+                                <div ref={chatBodyRef6} className='chat-Body'>
+                                    <div className="message bot-message">
+                                        <img src={ChatBot_Logo} alt="Logo do Chatbot" className='S-Chat-Logo'/>
+                                        <p className="message-text">
+                                            Hi, How We Can Help You?
+                                        </p>
+                                    </div>
+            
+                                    {chatHistory6.map((chat, index) => (
+                                        !chat.hideInChat6 && (
+                                        <div key={index} className={`message ${chat.role === "model" ? "bot" : "user"}-message ${chat.isError6 ? "error" : "" }`}>
+                                            {chat.role === "model" && <img src={ChatBot_Logo} alt="Logo do Chatbot" className='S-Chat-Logo'/>}
+                                            <p className="message-text">
+                                                {chat.text}
+                                            </p>
+                                        </div>
+                                    )))}
+                                </div>
+            
+                                <div className="chat-Footer">
+                                    <form action="#" className="chat-Form" onSubmit={handleFormSubmit}>
+                                        <input ref={inputRef6} type='text' placeholder='Message...' className='message-input' required/>
+                                        <button>
+                                            <IoIosArrowUp className="ATP-Chat-Icon"/>
+                                        </button>{/*Talvez Tirar*/}
+                                    </form>
+                                </div>
+                            </div>   
+                        </div>
+            
 
             <motion.div initial={{ opacity: 0, x: 250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className='fixed-bottom p-3 bg-transparent' style={{zIndex: "7", left: "initial" }} >
                 <a href='https://wa.me/11982747281' target='_blank'>
