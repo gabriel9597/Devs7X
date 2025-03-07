@@ -352,7 +352,7 @@ function ContatoEng() {
                                         <input ref={inputRef6} type='text' placeholder='Message...' className='message-input' required/>
                                         <button>
                                             <IoIosArrowUp className="ATP-Chat-Icon"/>
-                                        </button>{/*Talvez Tirar*/}
+                                        </button>
                                     </form>
                                 </div>
                             </div>   

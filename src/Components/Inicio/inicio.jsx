@@ -553,7 +553,7 @@ function Inicio() {
                             <input ref={inputRef} type='text' placeholder='Mensagem...' className='message-input' required/>
                             <button>
                                 <IoIosArrowUp className="ATP-Chat-Icon"/>
-                            </button>{/*Talvez Tirar*/}
+                            </button>
                         </form>
                     </div>
                 </div>   
