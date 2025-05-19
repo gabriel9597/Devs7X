@@ -206,7 +206,7 @@ function Contato() {
                                 <h6>Entre em Contato Também por esses Meios:</h6>
                                 <div className='fh-icons'>
                                     <a href='https://www.instagram.com/devs7x_institucional/' className='link-Rs'> <FaSquareInstagram className='footer-icons'/> </a>
-                                    <a href='https://api.whatsapp.com/send?phone=5511982747281' className='link-Rs'> <FaSquareWhatsapp className='footer-icons'/> </a>
+                                    <a href='https://api.whatsapp.com/send?phone=5511980539398' className='link-Rs'> <FaSquareWhatsapp className='footer-icons'/> </a>
                                     <a href="mailto:gabrieldevs7x@gmail.com" className='link-Rs'><MdOutlineMail className='footer-icons'/></a>
                                 </div>
                             </div>
@@ -236,7 +236,7 @@ function Contato() {
 
                         <div className="item3">
                             <h2>Telefone para Contato:</h2>
-                            <span>(11) 98274-7281</span>
+                            <span>(11) 98053-9398</span>
                         </div>       
                     </div>
 
@@ -278,7 +278,7 @@ function Contato() {
                         <div className="footer-row">
                             <motion.div  variants={variantsDTPFooter3} initial="initial" whileInView="animate" className="footer-col1">
                                 <h5 className='a'>Contate-nos Também por Telefone:</h5>
-                                <h6>(11) 98274-7281</h6>
+                                <h6>(11) 98053-9398</h6>
                             </motion.div>
 
                             <motion.div  variants={variantsDTPFooter3} initial="initial" whileInView="animate" className="footer-col2">
@@ -299,7 +299,7 @@ function Contato() {
                                 <ul>
                                     <h5>Conheça-Nos e Tire Qualquer Dúvida Também por Esses Meios:</h5>
                                     <a href='https://www.instagram.com/devs7x_institucional/' className='link-Rs'> <FaSquareInstagram className='footer-icons'/> </a>
-                                    <a href='https://api.whatsapp.com/send?phone=5511982747281' className='link-Rs'> <FaSquareWhatsapp className='footer-icons'/></a>
+                                    <a href='https://api.whatsapp.com/send?phone=5511980539398' className='link-Rs'> <FaSquareWhatsapp className='footer-icons'/></a>
                                     <a href="mailto:gabrieldevs7x@gmail.com" className='link-Rs'><MdOutlineMail className='footer-icons'/></a>
                                 </ul>
                             </motion.div>
@@ -359,7 +359,7 @@ function Contato() {
                         </div>
 
             <motion.div initial={{ opacity: 0, x: 250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className='fixed-bottom p-3 bg-transparent' style={{zIndex: "7", left: "initial" }} >
-                <a href='https://wa.me/11982747281' target='_blank'>
+                <a href='https://wa.me/11980539398' target='_blank'>
                     <img src={WhatsappLogo} width="60" className='zap-button' alt='Logo do Whatsapp'/>
                 </a>
             </motion.div>
