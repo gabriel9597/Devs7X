@@ -243,27 +243,27 @@ function Contato() {
                     <div className="formContact">
                         <form className='Form-Input-Container' ref={form} onSubmit={sendEmail}>
                             <div className="input-group">
-                                <input type="text" name="Nome" required=""/>
+                                <input type="text" name="Nome" required/>
                                 <label for="">Qual é seu Nome?</label>
                             </div>
                             
                             <div className="input-group">
-                                <input type="tel" name="Numero" required=""/>
+                                <input type="tel" name="Numero" required/>
                                 <label for="">Qual é seu Número?</label>
                             </div>
 
                             <div className="input-group">
-                                <input type="text" name="Nome_da_Empresa" required=""/>
+                                <input type="text" name="Nome_da_Empresa" required/>
                                 <label for="">Qual é o Nome de sua Empresa?</label>
                             </div>
 
                             <div className="input-group">
-                                <textarea name="Site_Escolhido" required=""></textarea>
+                                <textarea name="Site_Escolhido" required></textarea>
                                 <label for="">Qual Tipo de Projeto está Interessado em Fazer?</label>
                             </div>
 
                             <div id="" className="input-group txt-long2">
-                                <input type="text" name="Horario_Para_Contato" required=""/>
+                                <input type="text" name="Horario_Para_Contato" required/>
                                 <label for="">Qual é o Melhor Horário para Entrarmos em Contato?</label>
                             </div>
 

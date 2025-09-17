@@ -1069,48 +1069,48 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
         font-size: 28px;
       }
 
-      .navbar-toggler {
+    .navbar-toggler {
         color: var(--icons-color);
         border: 1px solid var(--icons-color) !important;
         margin-right: 5px;
-      }
-      
-      .navbar-toggler::before,
-      .navbar-toggler::after {
+    }
+    
+    .navbar-toggler::before,
+    .navbar-toggler::after {
         border: 1px solid var(--icons-color);;
-      }
-      
-      .navbar-toggler:hover {
+    }
+    
+    .navbar-toggler:hover {
         border: 1px solid var(--icons-color);;
-      }
+    }
 
-      .navbar-toggler:focus {
+    .navbar-toggler:focus {
         box-shadow: none !important;
-      }
+    }
 
-      .Hero {
+    .Hero {
         margin-top: -35px;
-      }
+    }
 
-      .CardEx-Items {
+    .CardEx-Items {
         flex-direction: column;
-      }
+    }
 
-      .Card {
-        margin-left: auto;
-        margin-right: auto;
-      }
+    .Card {
+    margin-left: auto;
+    margin-right: auto;
+    }
 
-      .Lines::after, .aside::before {
-        width: 39%;
-        margin: auto -55px;
-      }
+    .Lines::after, .aside::before {
+    width: 39%;
+    margin: auto -55px;
+    }
 
-      .Lines::before {
+    .Lines::before {
         margin-right: -40px !important;
-      }
+    }
 
-      .total .wrapper {
+    .total .wrapper {
         flex-direction: column;
         padding-right: 50px;
         padding-left: 30px;
@@ -1441,6 +1441,7 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
     .btn-M2 {
         margin: 0 auto 20px;
     }
+    
     .Cta-Text {
         width: 360px;
     }
