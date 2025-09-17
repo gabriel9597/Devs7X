@@ -226,7 +226,7 @@ function Contato() {
                         
                         <div className="item1">
                             <h2>Email</h2>
-                            <span>Contact@Devs7x.com</span>
+                            <span>gabrieldevs7x@gmail.com</span>
                         </div>
 
                         <div className="item2">
