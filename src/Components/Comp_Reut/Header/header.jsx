@@ -15,7 +15,6 @@ import {
 } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
 import { RiCloseLargeFill } from "react-icons/ri";
-
 import {motion, useScroll, useMotionValueEvent} from 'framer-motion';
 
 function Header() {
