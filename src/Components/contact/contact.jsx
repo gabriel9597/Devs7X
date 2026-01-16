@@ -27,6 +27,8 @@ import WhatsappLogo from "../../Images/logowhatsapp.png";
 import emailjs from "@emailjs/browser";
 import {motion} from "framer-motion";
 
+import Header from '../Comp_Reut/Header/header.jsx';
+import Footer from '../Comp_Reut/Footer/footer.jsx';
 function Contato() {
 
   const form = useRef();
@@ -169,51 +171,7 @@ function Contato() {
                 </div>
             </motion.div>
 
-            <header className='header w-100 d-flex align-items-center z-3'>
-                <nav className="navbar navbar-expand-lg bg-transparent" aria-label="Offcanvas navbar large">
-                    <Link to="/" className='Link-Logo me-auto'><motion.img initial={{ opacity: 0, x: -250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className='Logo' src={Logo} alt="Logo"/></Link>
-                    
-                    <motion.button initial={{ opacity: 0, x: 90 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className='navbar-toggler ms-auto' type='button' data-bs-toggle="offcanvas" data-bs-target="#nav-principal" aria-controls="nav-principal" aria-label="Toggle navigation" id="b-Menu">
-                        <span role='button'>
-                            <FaBars className='menu-icon' aria-hidden="true"/>
-                        </span>
-                    </motion.button>
-
-                    <div className="offcanvas offcanvas-end backg-menu" tabIndex="-1" id="nav-principal" aria-labelledby="nav-principalLabel">
-                        <div className="offcanvas-header">
-                            <img className='M-Logo' src={Logo} alt="Menu-Logo"/>
-                            <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-
-                        <div className="offcanvas-body">
-                            <motion.ul initial={{ opacity: 0, x: 250 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 2 }} className="navbar-nav ms-auto">
-                                <li className='nav-item'>
-                                    <Link to="/" className='nav-link I'><FaHouseChimney className='Menu-icons'/> Início</Link>
-                                </li>
-
-                                <li className='nav-item'>
-                                    <Link to="/Servicos" className='nav-link S'><FaTv className='Menu-icons'/> Serviços</Link>
-                                </li>
-
-                                <li className='nav-item'>
-                                    <Link to="/Contato" className='nav-link active'><FaPhone className='Menu-icons'/> Contato</Link>
-                                </li>
-                            </motion.ul>
-
-                            <button className='btn btn-M4'><Link to="/" className="Sm-Link">Mais Informações!</Link></button>
-
-                            <div className='footer-header'>
-                                <h6>Entre em Contato Também por esses Meios:</h6>
-                                <div className='fh-icons'>
-                                    <a href='https://www.instagram.com/devs7x_institucional/' className='link-Rs'> <FaSquareInstagram className='footer-icons'/> </a>
-                                    <a href='https://api.whatsapp.com/send?phone=5511980539398' className='link-Rs'> <FaSquareWhatsapp className='footer-icons'/> </a>
-                                    <a href="mailto:gabrieldevs7x@gmail.com" className='link-Rs'><MdOutlineMail className='footer-icons'/></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </header>
+            <Header />
 
             <motion.section initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 2 }} className='Contact-BG'>
                 <img src={ContHero} alt="Background de um Homem Usando um Site" className='Contact-Img'/>
@@ -307,7 +265,7 @@ function Contato() {
 
                         <hr />
                         
-                        <p className='copyright'><FaCopyright /> CopyRight 2025 - Devs7x International - Todos os Direitos Reservados</p>   
+                        <Footer />   
                     </div>
             </section>
         </div>

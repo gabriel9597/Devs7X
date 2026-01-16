@@ -1,0 +1,11 @@
+.footerEng {
+    text-align: center;
+}
+
+/*BreakPoints */
+
+@media (max-width: 1335px) {
+    .footerEng {
+        font-size: 14px;
+    }
+}

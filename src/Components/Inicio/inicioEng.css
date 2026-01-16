@@ -33,7 +33,7 @@
     width: 100%;
 }
 .navbar-nav {
-    flex-direction: row !important;
+    flex-direction: row /*!important*/;
 }
 
 .navbar-nav .nav-item {
@@ -724,117 +724,9 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 }
 
 @media (max-width: 991px) {
-
-    .navbar {
-        padding: 0 !important;
-    }
-    .Link-Logo {
-        margin-left: auto;
-    }
-
-    .Logo {
-        width: 175px;
-        height: 165px;
-    }
-
-    .offcanvas-header {
-        border-bottom: 2px groove #fff;
-    }
-    
-    .M-Logo {
-        width: 140px;
-        margin-left: 15px;
-    }
-
-    .btn-close {
-        opacity: 1 !important;
-    }
-
-    .offcanvas-body {
-        overflow: hidden !important;
-    }
-
-    .navbar-nav {
-        flex-direction: column !important;
-    }
-
-    .navbar-nav .nav-item {
-        padding: 10px 0px;
-        margin-bottom: 20px;
-    }
-
-    .navbar-nav .nav-item .nav-link.active::before,
-    .navbar-nav .nav-item .nav-link.S::after,
-    .navbar-nav .nav-item .nav-link.T::after {
-        left: 0;
-        background-color: #fff !important;
-        width: 100%;
-    }
-
-    .navbar-nav .nav-item .nav-link.S:hover::after {
-        width: 100%;
-    }
-
-    .Menu-icons {
-        margin-right: 5px;
-        font-size: 24px;
-    }
-
-    .btn-M2 {
-        background-color: var(--button-color) !important;
-        font-size: 1rem !important;
-        display: flex !important;
-        margin: 0 84px 20px;
-    }
-
-    .Sm-Link {
-        background-color: transparent !important;
-        color: #fff !important;
-        text-decoration: none !important;
-    }
-
-    .footer-header h6 {
-        color: #fff;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    .fh-icons {
-        display: flex;
-        justify-content: center;
-    }
-
-    #b-Menu {
-        margin-left: -9% !important;
-    }
-
-    .menu-icon {
-        color: var(--icons-color);
-        font-size: 28px;
-      }
-
-      .navbar-toggler {
-        color: var(--icons-color);
-        border: 1px solid var(--icons-color) !important;
-        margin-right: 5px;
-      }
-      
-      .navbar-toggler::before,
-      .navbar-toggler::after {
-        border: 1px solid var(--icons-color);;
-      }
-      
-      .navbar-toggler:hover {
-        border: 1px solid var(--icons-color);;
-      }
-
-      .navbar-toggler:focus {
-        box-shadow: none !important;
-      }
-
-      .Hero {
+      /*.Hero {
         margin-top: -35px;
-      }
+      }*/
 
       .CardEx-Items {
         flex-direction: column;

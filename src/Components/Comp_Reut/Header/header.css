@@ -1,0 +1,240 @@
+.header {
+    top: 0;
+    left: 0;
+    padding: 0rem 4% 4% 2rem;
+}
+
+.Link-Logo {
+    padding-left: 15px;
+}
+
+
+
+.Logo {
+    width: 170px;
+    height: 160px;
+    padding-top: 5px;
+}
+
+.offcanvas-header .btn-close {
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    --bs-navbar-padding-y: 0rem !important;
+}
+.navbar-nav {
+    flex-direction: row !important;
+}
+
+.navbar-nav .nav-item {
+    padding: 0px 20px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+    font-size: 1.25rem;
+    color: red;
+    font-weight: 500;
+}
+
+/* ===== ESTILO BASE DE TODOS OS LINKS ===== */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+  overflow: hidden;
+}
+
+/* ===== UNDERLINE DO ATIVO ===== */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: -2px;
+  width: 95%;
+  height: 1px;
+  background: red;
+  border-radius: 2px;
+  animation: underlineGrow 0.25s ease;
+}
+
+/* ===== UNDERLINE DO HOVER (APENAS NÃO-ATIVOS) ===== */
+.nav-link:not(.active)::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: -2px;
+  width: 0%;
+  height: 4px;
+  background: red;
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+
+.nav-link:not(.active):hover::after {
+  width: 95%;
+}
+
+/* ===== ANIMAÇÃO DO ATIVO ===== */
+@keyframes underlineGrow {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/*BreakPoints*/
+
+@media(max-width: 991px) {
+
+    .header {
+        padding: 0 !important;
+    }
+
+    .Link-Logo {
+        margin-left: auto;
+    }
+
+    .Logo {
+        width: 175px;
+        height: 165px;
+    }
+
+    .offcanvas-header {
+        border-bottom: 2px groove #fff;
+    }
+    
+    .M-Logo {
+        width: 140px;
+        margin-left: /*-8px*/15px;
+    }
+
+    .btn-close {
+        opacity: 1 !important;
+        --bs-btn-close-bg: none !important;
+        font-size: 1.5em;
+    }
+
+    .close-icon {
+        color: white !important;
+    }
+
+    .offcanvas-body {
+        overflow: hidden !important;
+    }
+
+    .navbar-nav {
+        flex-direction: column !important;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 10px 0px !important;
+        margin-bottom: 20px;
+    }
+
+    .nav-link.active::after {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item .nav-link.active::before,
+    .navbar-nav .nav-item .nav-link.S::after,
+    .navbar-nav .nav-item .nav-link.T::after {
+        left: 0;
+        background-color: #fff !important;
+        width: 100%;
+        height: 2px !important;
+    }
+
+    /*.navbar-nav .nav-item .nav-link.S:hover::after {
+        width: 100%;
+    }*/
+
+    .nav-link:not(.active)::after {
+        width: 100%;
+        background: white;
+    }
+
+    .nav-link:not(.active):hover::after {
+        width: 100%;
+    }
+
+    #b-Menu {
+        margin-left: -9% !important;
+    }
+
+    .menu-icon {
+        color: var(--icons-color);
+        font-size: 28px;
+      }
+
+    .navbar-toggler {
+        color: var(--icons-color);
+        border: 1px solid var(--icons-color) !important;
+        margin-right: 5px;
+    }
+    
+    .navbar-toggler::before,
+    .navbar-toggler::after {
+        border: 1px solid var(--icons-color);;
+    }
+    
+    .navbar-toggler:hover {
+        border: 1px solid var(--icons-color);;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+
+    .Menu-icons {
+        margin-right: 5px;
+        font-size: 24px;
+    }
+
+    .btn-M2 {
+        background-color: var(--button-color) !important;
+        font-size: 1rem !important;
+        display: flex !important;
+        margin: 0 auto 25px;
+    }
+
+    .footer-header h6 {
+        color: #fff;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .Sm-Link {
+        background-color: transparent !important;
+        color: #fff !important;
+        text-decoration: none !important;
+    }
+
+    .fh-icons {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .Logo {
+        width: 165px;
+        height: 155px;
+    }
+}
+
+@media (max-width: 450px) {
+    .Logo {
+        width: 150px;
+        height: 140px;
+
+    }
+
+    #b-Menu {
+        margin-left: -8% !important;
+    }
+
+    .menu-icon {
+        font-size: 24px;
+    }
+}

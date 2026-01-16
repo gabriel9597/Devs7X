@@ -25,86 +25,6 @@
     margin-right: 15px;
 }
 
-.header {
-    top: 0;
-    left: 0;
-    padding: 0rem 4% 4% 2rem;
-}
-
-.Link-Logo {
-    padding-left: 15px;
-}
-
-.Logo {
-    width: 170px;
-    height: 160px;
-    padding-top: 5px;
-}
-
-.offcanvas-header {
-    overflow: hidden;
-}
-
-.navbar {
-    width: 100%;
-    --bs-navbar-padding-y: 0rem !important;
-}
-.navbar-nav {
-    flex-direction: row !important;
-}
-
-.navbar-nav .nav-item {
-    padding: 0px 20px;
-}
-
-.navbar-nav .nav-item .nav-link {
-    position: relative;
-    font-size: 1.25rem;
-    color: #fff;
-    font-weight: 500;
-}
-
-.navbar-nav .nav-link.active {
-    color: #fff !important;
-}
-
-.navbar-nav .nav-item .nav-link.active::before {
-    content: '';
-    position: absolute;
-    left: 2px;
-    bottom: 1px;
-    width: 95%;
-    height: 1px;
-    background-color: red;
-}
-
-.navbar-nav .nav-item .nav-link.S:hover::after,
-.navbar-nav .nav-item .nav-link.T:hover::after {
-    width: 95%;
-}
-
-.navbar-nav .nav-item .nav-link.S::after {
-    content: '';
-    position: absolute;
-    left: 2px;
-    bottom: 1px;
-    width: 0;
-    height: 1px;
-    background-color: red;
-    transition: 0.3s ease;
-}
-
-.navbar-nav .nav-item .nav-link.T::after {
-    content: '';
-    position: absolute;
-    left: 2px;
-    bottom: 1px;
-    width: 0;
-    height: 1px;
-    background-color: red;
-    transition: 0.3s ease;
-}
-
 .Hero {
     margin-top: 50px;
     padding: 0px 40px 0px 42px/*Valor a Analisar*/;
@@ -981,113 +901,6 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
         margin-top: 20px !important;
     }
 
-    .navbar {
-        padding: 0 !important;
-    }
-    .Link-Logo {
-        margin-left: auto;
-    }
-
-    .Logo {
-        width: 175px;
-        height: 165px;
-    }
-
-    .offcanvas-header {
-        border-bottom: 2px groove #fff;
-    }
-    
-    .M-Logo {
-        width: 140px;
-        margin-left: 15px;
-    }
-
-    .btn-close {
-        opacity: 1 !important;
-    }
-
-    .offcanvas-body {
-        overflow: hidden !important;
-    }
-
-    .navbar-nav {
-        flex-direction: column !important;
-    }
-
-    .navbar-nav .nav-item {
-        padding: 10px 0px;
-        margin-bottom: 20px;
-    }
-
-    .navbar-nav .nav-item .nav-link.active::before,
-    .navbar-nav .nav-item .nav-link.S::after,
-    .navbar-nav .nav-item .nav-link.T::after {
-        left: 0;
-        background-color: #fff !important;
-        width: 100%;
-    }
-
-    .navbar-nav .nav-item .nav-link.S:hover::after {
-        width: 100%;
-    }
-
-    .Menu-icons {
-        margin-right: 5px;
-        font-size: 24px;
-    }
-
-    .btn-M2 {
-        background-color: var(--button-color) !important;
-        font-size: 1rem !important;
-        display: flex !important;
-        margin: 0 84px 20px;
-    }
-
-    .Sm-Link {
-        background-color: transparent !important;
-        color: #fff !important;
-        text-decoration: none !important;
-    }
-
-    .footer-header h6 {
-        color: #fff;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    .fh-icons {
-        display: flex;
-        justify-content: center;
-    }
-
-    #b-Menu {
-        margin-left: -9% !important;
-    }
-
-    .menu-icon {
-        color: var(--icons-color);
-        font-size: 28px;
-      }
-
-    .navbar-toggler {
-        color: var(--icons-color);
-        border: 1px solid var(--icons-color) !important;
-        margin-right: 5px;
-    }
-    
-    .navbar-toggler::before,
-    .navbar-toggler::after {
-        border: 1px solid var(--icons-color);;
-    }
-    
-    .navbar-toggler:hover {
-        border: 1px solid var(--icons-color);;
-    }
-
-    .navbar-toggler:focus {
-        box-shadow: none !important;
-    }
-
     .Hero {
         margin-top: -35px;
     }
@@ -1313,11 +1126,6 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
         margin: 0 31px;
     }
 
-    .Logo {
-        width: 165px;
-        height: 155px;
-    }
-
     .Main-Img {
         width: 64%;
     }
@@ -1394,20 +1202,6 @@ Caso não tira os outros 3(aqui e no html) e deixar somente o primeiro(sem o nú
 
     .Flags_Of_Langs .USA, .Flags_Of_Langs .BR {
         margin: 0px 35px;
-    }
-
-
-    .Logo {
-        width: 150px;
-        height: 140px;
-    }
-
-    #b-Menu {
-        margin-left: -8% !important;
-    }
-
-    .menu-icon {
-        font-size: 24px;
     }
 
     .Hero-Col-Right {
