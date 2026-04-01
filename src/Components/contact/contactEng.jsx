@@ -8,13 +8,8 @@ import ChatBot_Logo from "../../Images/Devs7xChatBotLogo.png";
 import "./contactEng.css";
 import { MdOutlineMail } from "react-icons/md";
 import { 
-    FaBars,
-    FaCopyright,
-    FaHouseChimney,
-    FaPhone,
     FaSquareInstagram,
-    FaSquareWhatsapp,
-    FaTv
+    FaSquareWhatsapp
  } from 'react-icons/fa6';
  import {
     IoIosArrowUp,
