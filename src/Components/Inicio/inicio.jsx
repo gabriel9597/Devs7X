@@ -15,15 +15,10 @@ import ImgAb1 from "../../Images/img5V.jpg";
 import ImgAb2 from "../../Images/img6.png";
 import ImgAb3 from "../../Images/img7.jpg";
 import { 
-    FaBars,
-    FaHouseChimney,
-    FaCopyright,
-    FaPhone,
     FaQuoteLeft,
     FaQuoteRight,
     FaSquareInstagram,
-    FaSquareWhatsapp,
-    FaTv
+    FaSquareWhatsapp
 } from "react-icons/fa6";
 import {
     IoIosArrowUp, 
